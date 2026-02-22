@@ -1,0 +1,802 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* ===============================
+           BRAND DISDUKCAPIL MODERN STYLE
+        ================================= */
+
+.brand-title {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.1;
+  color: #0d47a1;
+  text-transform: uppercase;
+}
+
+.brand-title:hover {
+  color: #08306b;
+  transition: 0.3s ease;
+}
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+}
+.top-bar {
+  background-color: #0d47a1;
+  color: white;
+  padding: 8px 0;
+  font-size: 14px;
+}
+
+.section-title {
+  border-left: 5px solid #0d47a1;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.service-box {
+  transition: 0.3s;
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  background-color: #0d47a1;
+  color: white;
+}
+
+.service-box:hover i {
+  color: white !important;
+}
+/* Dropdown animation premium */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  display: block;
+  visibility: hidden;
+  border-radius: 12px;
+}
+
+/* Saat hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Efek item di dalamnya */
+.dropdown-item {
+  transition: 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5ff;
+  padding-left: 20px;
+}
+/* ===============================
+   NAVBAR CLEAN & PROFESSIONAL
+================================= */
+/* Reset efek bootstrap */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:active,
+.navbar-nav .dropdown-toggle.show,
+.navbar-nav .dropdown-toggle:focus,
+.navbar-nav .dropdown-toggle:active {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* STYLE UTAMA MENU */
+.navbar-nav .nav-link {
+  position: relative;
+  padding: 8px 15px;
+
+  /* === FONT === */
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  /* === WARNA === */
+  color: #0d47a1;
+
+  transition: 0.3s ease;
+}
+
+/* Warna saat aktif */
+.navbar-nav .nav-link.active {
+  color: #0d47a1 !important;
+}
+
+/* Garis animasi default */
+.navbar-nav .nav-link:not(.dropdown-toggle)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: #0d47a1;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+/* Hanya muncul saat hover */
+.navbar-nav .nav-link:hover {
+  color: #0d47a1;
+}
+
+.navbar-nav .nav-link:not(.dropdown-toggle):hover::after {
+  width: 70%;
+}
+
+/* ===============================
+       BRAND LOGO STYLE
+    ================================ */
+
+.brand-logo {
+  width: auto;
+  height: 50px;
+  object-fit: contain;
+}
+
+.brand-main {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d47a1;
+}
+
+.brand-sub {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.brand-title:hover .brand-main {
+  color: #08306b;
+  transition: 0.3s ease;
+}
+
+/* ===== LAYANAN - PREMIUM INSTANSI STYLE ===== */
+
+.service-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e9ecef;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efek glow background halus */
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(13, 110, 253, 0.06) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover utama */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  border-color: #0d6efd;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon animasi */
+.service-card img {
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.12);
+}
+
+/* Judul animasi */
+.service-card h6 {
+  transition: color 0.3s ease;
+}
+
+.service-card:hover h6 {
+  color: #0d6efd;
+}
+
+/* Garis animasi bawah */
+.service-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(90deg, #0d6efd, #4dabf7);
+  transition: width 0.35s ease;
+}
+
+.service-card:hover::after {
+  width: 100%;
+}
+
+/* ===== BERITA - INSTANSI PROFESSIONAL STYLE ===== */
+
+.berita-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  will-change: transform;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.berita-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Gambar ===== */
+
+.berita-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.berita-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.berita-card:hover .berita-img {
+  transform: scale(1.04);
+}
+
+/* ===== Tanggal (Overlay Elegant) ===== */
+
+.berita-date {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(13, 71, 161, 0.9);
+  color: #ffffff;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* ===== Konten ===== */
+
+.berita-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Judul (Max 2 Baris) ===== */
+
+.berita-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #1f2937;
+  margin-bottom: 12px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.berita-card:hover .berita-title {
+  color: #0d47a1;
+}
+
+/* ===== Link ===== */
+
+.berita-link {
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0d47a1;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.berita-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== Garis Animasi ===== */
+
+.berita-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #0d47a1, #4dabf7);
+  transition: width 0.3s ease;
+}
+
+.berita-card:hover::after {
+  width: 100%;
+}
+
+/* ===== FEATURED NEWS ===== */
+
+.berita-featured .berita-img {
+  height: 350px;
+}
+
+.berita-featured .berita-title {
+  font-size: 20px;
+}
+
+/* ===== SMALL NEWS ===== */
+
+.berita-small {
+  display: flex;
+  flex-direction: row;
+  height: 120px;
+}
+
+.berita-small .berita-image-wrapper {
+  width: 35%;
+}
+
+.berita-small .berita-img {
+  height: 100%;
+}
+
+.berita-small .berita-content {
+  width: 65%;
+  padding: 15px;
+}
+
+.berita-small .berita-title {
+  font-size: 14px;
+  -webkit-line-clamp: 2;
+}
+/* ===== FEATURED FIX ===== */
+
+.berita-featured .berita-img {
+  height: 320px;
+}
+
+.berita-featured .berita-content {
+  padding: 24px;
+}
+
+/* ===== SMALL CARD REFINEMENT ===== */
+
+.berita-small {
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 110px;
+}
+
+.berita-small .berita-image-wrapper {
+  width: 38%;
+  height: 100%;
+}
+
+.berita-small .berita-img {
+  height: 100%;
+  border-radius: 0;
+}
+
+.berita-small .berita-content {
+  width: 62%;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.berita-small .berita-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Hapus garis animasi untuk small card */
+.berita-small::after {
+  display: none;
+}
+/* Divider antar small card */
+.berita-list .berita-small:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+.berita-small {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  will-change: transform;
+}
+
+.berita-small:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+.berita-featured .berita-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.berita-featured .berita-image-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.05),
+    transparent
+  );
+}
+
+.berita-card,
+.berita-small {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+/* ===============================
+   WELCOME SCREEN ANIMATION
+================================= */
+
+#welcome-screen {
+  position: fixed;
+  inset: 0;
+  background: url("../img/bg-welcome.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  color: white;
+  overflow: hidden;
+
+  opacity: 1;
+  transform: scale(1);
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+
+/* Overlay */
+#welcome-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* ===============================
+   LOGO MUNCUL DULU
+================================= */
+
+.welcome-logo {
+  width: 120px;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: logoIntro 1s ease forwards;
+}
+
+/* ===============================
+   TEXT MUNCUL SETELAH LOGO
+================================= */
+
+.welcome-content h1 {
+  font-family: "Poppins", sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textFade 1s ease forwards;
+  animation-delay: 1s; /* muncul setelah logo */
+}
+
+.welcome-content p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textFade 1s ease forwards;
+  animation-delay: 1.8s; /* muncul paling terakhir */
+}
+
+.welcome-content h1 {
+  font-size: 70px; /* ukuran besar */
+  color: gold;
+  font-weight: 700; /* tebal */
+  letter-spacing: 1px; /* jarak huruf */
+  /* Glow halus */
+  text-shadow:
+    0 0 8px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(7, 7, 8, 0.4);
+}
+
+.welcome-content p {
+  font-family: "Poppins", sans-serif;
+  color: gold;
+  font-size: 20px;
+  font-weight: 400;
+  /* Glow lebih lembut dari judul */
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* ===============================
+   ANIMATIONS
+================================= */
+
+@keyframes logoIntro {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes textFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade out */
+#welcome-screen.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+/* ===============================
+   FLOATING BUTTON PREMIUM
+================================= */
+
+.floating-contact {
+  position: fixed;
+  right: 20px;
+  bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 999;
+}
+
+/* Style umum */
+.fc-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Warna */
+.main-btn {
+  background: #6c63ff;
+}
+.wa {
+  background: #25d366;
+}
+.email {
+  background: #e74c3c;
+}
+
+/* Hover */
+.fc-btn:hover {
+  transform: scale(1.1);
+}
+
+/* SUB BUTTON default hidden */
+.sub-btn {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+/* Saat aktif */
+.floating-contact.active .sub-btn {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Bounce animation saat load */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.main-btn {
+  animation: bounceIn 0.6s ease;
+}
+/* ===============================
+   BOUNCE ATTENTION LOOP
+================================= */
+
+@keyframes bounceAttention {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.15);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+}
+
+.main-btn.attention {
+  animation: bounceAttention 0.6s ease;
+}
+
+/* Hide saat scroll ke atas */
+.floating-contact.hide {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+/* Tambahkan padding dalam card */
+.service-card {
+  padding: 30px 20px;
+}
+
+/* Rapikan judul */
+.service-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Rapikan deskripsi */
+.service-desc {
+  font-size: 14px;
+  color: #6c757d;
+  min-height: 60px;
+}
+.service-icon {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #f1f5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.service-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* ===== FOOTER OPTIMIZED ===== */
+
+footer {
+  background-color: #0d47a1;
+  color: white;
+}
+/* ===== FOOTER OPTIMIZED ===== */
+
+footer {
+  padding: 10px 0; /* sebelumnya biasanya 40–60px */
+}
+
+.footer-content {
+  line-height: 1.5; /* rapatkan jarak antar baris */
+}
+
+footer h5,
+footer h6 {
+  margin-bottom: 8px; /* kecilkan jarak judul */
+}
+
+footer p {
+  margin-bottom: 4px; /* rapatkan paragraf */
+  font-size: 14px;
+}
+
+footer small {
+  font-size: 13px;
+}
+
+/* Jika ada row bootstrap */
+footer .row {
+  margin-bottom: 0;
+}
+
+/* Copyright */
+.footer-bottom {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 13px;
+}
+footer {
+  min-height: auto;
+}
+
+footer * {
+  margin-top: 0;
+}
+
+.carousel-caption {
+  bottom: 1%;
+}
+
+.carousel-caption h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+}

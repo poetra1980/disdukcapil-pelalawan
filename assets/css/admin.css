@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #eef2f7;
+}
+
+.wrapper {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: linear-gradient(180deg, #0f3057, #00587a);
+  padding: 20px;
+  color: white;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding-left: 18px;
+}
+
+.logout {
+  background: #c0392b;
+  text-align: center;
+}
+
+.logout:hover {
+  background: #a93226;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+}
+
+/* TOPBAR */
+.topbar {
+  background: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* CONTENT */
+.content {
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARD MODERN */
+.card {
+  position: relative;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Garis atas gradient */
+.card::before {
+  content: "";
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #0f3057, #00587a);
+}
+
+/* ICON BULAT */
+.card .icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0f3057, #00587a);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+/* JUDUL */
+.card h3 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* ANGKA */
+.card p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #0f3057;
+}
+
+/* CHART */
+.chart-container {
+  background: white;
+  margin: 25px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  width: calc(100% - 50px);
+  height: 400px;
+}
+
+.chart-container canvas {
+  max-height: 400px !important;
+}
+.berita-section {
+  background: white;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.berita-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.btn-tambah {
+  background: #1e88e5;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.berita-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.berita-table th,
+.berita-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+.full-width {
+  width: 100%;
+}
+
+.berita-section {
+  background: white;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.berita-section table {
+  width: 100%;
+}
+
+.berita-table th {
+  background: #f5f7fa;
+}
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  background-color: #0d47a1;
+  color: white;
+}
+
+.service-card:hover i,
+.service-card:hover small {
+  color: white !important;
+}
+.card.berita::before {
+  background: linear-gradient(90deg, #1565c0, #42a5f5);
+}
+
+.card.admin::before {
+  background: linear-gradient(90deg, #6a1b9a, #ab47bc);
+}
+
+.card.sistem::before {
+  background: linear-gradient(90deg, #2e7d32, #66bb6a);
+}
+
+.card.layanan::before {
+  background: linear-gradient(90deg, #ef6c00, #ffa726);
+}
+
+.card.slider::before {
+  background: linear-gradient(90deg, #c62828, #ef5350);
+}
+body.dark-mode {
+  background: #121212;
+}
+
+body.dark-mode .sidebar {
+  background: #1f1f1f;
+}
+
+body.dark-mode .main,
+body.dark-mode .topbar,
+body.dark-mode .card,
+body.dark-mode .chart-container,
+body.dark-mode .berita-section {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark-mode .card p {
+  color: #4fc3f7;
+}
+.status-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-badge.aktif {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+}
+.aktif {
+  background: #2ecc71;
+}
+.nonaktif {
+  background: #e74c3c;
+}
+
+.notif {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+.sukses {
+  background: #d4edda;
+  color: #155724;
+}
+.navbar-nav .nav-link {
+  color: #0d47a1 !important;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1565c0 !important;
+}
+.dropdown-menu {
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f5ff;
+  color: #0d47a1;
+  padding-left: 20px;
+  transition: 0.3s;
+}
+/* Navbar putih */
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 3px solid #0d47a1; /* garis biru resmi */
+}
+
+/* Warna teks menu */
+.navbar-nav .nav-link {
+  color: #0d47a1 !important;
+  font-weight: 600;
+  margin-right: 15px;
+  transition: 0.3s;
+}
+
+/* Hover menu */
+.navbar-nav .nav-link:hover {
+  color: #1565c0 !important;
+}
+
+/* Menu aktif */
+.navbar-nav .nav-link.active {
+  color: #1565c0 !important;
+  border-bottom: 2px solid #1565c0;
+}
